@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="application-root"></div>
+<script 
+    src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+<script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+<script type="text/babel">
+    function App(props) {
+        console.log(props);
+        return (
+            <header>
+               {props.children} 
+            </header>
+        )
+    };
+    ReactDOM.render(
+        <App className='my-class'>
+            <header>
+                <h1>Sally Student</h1>
+                <img src={`https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg`} alt="Professional Image of Sally Student" style={{width: 200, height: 300}}/>
+            </header>
+            <address>
+                <p>Sally Student</p>
+                <a href="mailto:Sallystudent@gmail.com">SallyStudent@gmail.com</a>
+                <p>Phone Number: 215-683-8547</p>
+            </address>
+            <main>
+                <section>
+                    <h2>Education</h2>
+                    <p>Temple University 2008-2012</p>
+                </section>
+                <section>
+                    <h2>Employment History</h2>
+                    <p>Wells Fargo 
+                    Underwriter</p>
+                    <ul>
+                        <li>2012-Current</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua.</li>
+                    </ul>
+                    <p>Church's Chicken
+                    Chef</p>
+                    <ul>
+                        <li>2010-2012</li>
+                        <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    </ul>  
+                </section>         
+            </main>
+        </App>,
+        document.querySelector('#application-root')
+    );
+</script>
+</body>
+</html>
